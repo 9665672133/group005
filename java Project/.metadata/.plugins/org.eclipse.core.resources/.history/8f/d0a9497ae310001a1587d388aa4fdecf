@@ -1,0 +1,64 @@
+package com.admin;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookDao {
+	public static Connection getConnection(){  
+        Connection con=null;  
+        try{  
+            Class.forName("com.mysql.jdbc.Driver");  
+            System.out.println("Driver found");
+            con = DriverManager.getConnection("jdbc:mysql://192.168.100.26:3306/group005_bookstore","group005","welcome");            
+            System.out.println("Connection successful");
+        }catch(Exception e){System.out.println(e);}  
+        return con;  
+    } 
+	
+	 public static List <Book> getAllBooks(){  
+	        List<Book> list=new ArrayList<Book>();  
+	          
+	        try{  
+	            Connection con=BookDao.getConnection();  
+	            PreparedStatement ps=con.prepareStatement("select * from Book");  
+	            ResultSet rs=ps.executeQuery();  
+	            while(rs.next()){  
+	            	Book b=new Book();  
+	            	b.setBook_Id(rs.getString(1));
+	            	b.setBook_Name(rs.getString(2));
+	            	b.setAuthor(rs.getString(3));
+	            	b.setPrice(rs.getInt(4));
+	                list.add(b);  
+	            }  
+	            con.close();  
+	        }catch(Exception e){e.printStackTrace();}  
+	          
+	        return list;  
+	    }  
+	 
+	 public static Book getBookById(int id){  
+		 Book e=new Book();  
+	          
+	        try{  
+	            Connection con=BookDao.getConnection();  
+	            PreparedStatement ps=con.prepareStatement("select * from empjava where id=?");  
+	            ps.setInt(1,id);  
+	            ResultSet rs=ps.executeQuery();  
+	            if(rs.next()){  
+	                e.setId(rs.getInt(1));  
+	                e.setName(rs.getString(2));  
+	                e.setPassword(rs.getString(3));  
+	                e.setEmail(rs.getString(4));  
+	                e.setCountry(rs.getString(5));  
+	            }  
+	            con.close();  
+	        }catch(Exception ex){ex.printStackTrace();}  
+	          
+	        return e;  
+	    }  
+
+}

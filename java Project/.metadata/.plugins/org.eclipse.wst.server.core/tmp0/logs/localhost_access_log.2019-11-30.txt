@@ -1,0 +1,9 @@
+127.0.0.1 - - [30/Nov/2019:07:50:52 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:11 +0530] "GET /Project/ HTTP/1.1" 200 450
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:14 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:24 +0530] "GET /Project/ValidateServlet?username=Admin&password=admin HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:24 +0530] "GET /Project/AdminLogin.jsp HTTP/1.1" 200 336
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:26 +0530] "GET /Project/ViewBookServlet HTTP/1.1" 200 1248
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:28 +0530] "GET /Project/BuyServlet?id=c1 HTTP/1.1" 200 504
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:35 +0530] "POST /Project/BuyProduct?id=c1 HTTP/1.1" 200 620
+0:0:0:0:0:0:0:1 - - [30/Nov/2019:07:51:49 +0530] "POST /Project/BuyProduct1?id=c1&qaun=2 HTTP/1.1" 200 35

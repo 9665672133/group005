@@ -1,0 +1,54 @@
+package com.admin;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class BuyServlet
+ */
+public class BuyServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public BuyServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		String sid=request.getParameter("id");
+		Book b=BookDao.getBookById(sid);
+		PrintWriter out=response.getWriter();
+		out.print("<form action='EditServlet2' method='post'>");  
+        out.print("<table>");  
+        out.print("<tr><td>ID:</td><td><input type='hidden' name='id' value='"+b.getBook_Id()+"'/></td></tr>");  
+        out.print("<tr><td>Name:</td><td><input type='hidden' name='name' value='"+b.getBook_Name()+"'/></td></tr>");  
+        out.print("<tr><td>Author:</td><td><input type='hidden' name='password' value='"+b.getAuthor()+"'/> </td></tr>");  
+        out.print("<tr><td>Price:</td><td><input type='hidden' name='email' value='"+b.getPrice()+"'/></td></tr>");  
+        out.print("<tr><td><input type='submit' value='Edit & Save '/></td><td><input type='button' value='cancle'/></td></tr>");  
+        out.print("</table>");  
+        out.print("</form>");  
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

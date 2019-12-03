@@ -1,0 +1,18 @@
+package com.admin;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class BookDao {
+	public static Connection getConnection(){  
+        Connection con=null;  
+        try{  
+            Class.forName("com.mysql.jdbc.Driver");  
+            System.out.println("Driver found");
+            con = DriverManager.getConnection("jdbc:mysql://192.168.100.26:3306/group005_bookstore","group005","welcome");            
+            System.out.println("Connection successful");
+        }catch(Exception e){System.out.println(e);}  
+        return con;  
+    } 
+
+}

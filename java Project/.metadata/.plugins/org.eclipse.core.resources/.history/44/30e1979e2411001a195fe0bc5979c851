@@ -1,0 +1,87 @@
+package com.admin;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookDao {
+	public static Connection getConnection(){  
+        Connection con=null;  
+        try{  
+            Class.forName("com.mysql.jdbc.Driver");  
+            System.out.println("Driver found");
+            con = DriverManager.getConnection("jdbc:mysql://192.168.100.26:3306/group005_bookstore","group005","welcome");            
+            System.out.println("Connection successful");
+        }catch(Exception e){System.out.println(e);}  
+        return con;  
+    } 
+	
+	 public static List <Book> getAllBooks(){  
+	        List<Book> list=new ArrayList<Book>();  
+	          
+	        try{  
+	            Connection con=BookDao.getConnection();  
+	            PreparedStatement ps=con.prepareStatement("select * from Book");  
+	            ResultSet rs=ps.executeQuery();  
+	            while(rs.next()){  
+	            	Book b=new Book();  
+	            	b.setBook_Id(rs.getString(1));
+	            	b.setBook_Name(rs.getString(2));
+	            	b.setAuthor(rs.getString(3));
+	            	b.setPrice(rs.getInt(4));
+	                list.add(b);  
+	            }  
+	            con.close();  
+	        }catch(Exception e){e.printStackTrace();}  
+	          
+	        return list;  
+	    }  
+	 
+	 public static Book getBookById(String id){  
+		 Book e=new Book();  
+	          
+	        try{  
+	            Connection con=BookDao.getConnection();  
+	            PreparedStatement ps=con.prepareStatement("select * from Book where Book_Id=?");  
+	            ps.setString(1,id);  
+	            ResultSet rs=ps.executeQuery();  
+	            if(rs.next())
+	            {  
+	            	e.setBook_Id(rs.getString(1));
+	            	e.setBook_Name(rs.getString(2));
+	            	e.setAuthor(rs.getString(3));
+	            	e.setPrice(rs.getInt(4));
+
+	            }  
+	            con.close();  
+	        }catch(Exception ex){ex.printStackTrace();}  
+	          
+	        return e;  
+	    }  
+	 
+	 public static int save(Order e){  
+	        int status=0;  
+	        int num=1;
+	        java.util.Random random=new java.util.Random();
+	        num=random.nextInt(100);
+	        try{  
+	            Connection con=BookDao.getConnection();  
+	            PreparedStatement ps=con.prepareStatement(  
+	                         "insert into Order_Details (Order_Id,Book_Id,Cust_Name,Phone_No,Address,Order_Date,Quantity) values (?,?,?,?,?,?,?)");  
+	            ps.setInt(1,num);  
+	            ps.setString(2, e.getBook_Id());
+	            ps.setString(3, e.getCust_Name());
+	            ps.setString(4, x);
+	              
+	            status=ps.executeUpdate();  
+	              
+	            con.close();  
+	        }catch(Exception ex){ex.printStackTrace();}  
+	          
+	        return status;  
+	    }  
+
+}

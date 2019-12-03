@@ -1,0 +1,35 @@
+{ "_id" : { "$oid" : "532299d624a4be9064772927" }, "empid" : 1020, "ename" : "king", "job" : "president", "mgr" : null, "sal" : 5000, "comm" : null, "deptno" : 10 }
+{ "_id" : { "$oid" : "53229a8824a4be9064772928" }, "empid" : 1021, "ename" : "smith", "job" : "manager", "mgr" : 1020, "sal" : 3400, "comm" : null, "deptno" : 10 }
+{ "_id" : { "$oid" : "53229ab224a4be9064772929" }, "empid" : 1022, "ename" : "james", "job" : "manager", "mgr" : 1020, "sal" : 4700, "comm" : null, "deptno" : 20 }
+{ "_id" : { "$oid" : "5322a64e24a4be906477292a" }, "empid" : 1023, "ename" : "jack", "job" : "accountant", "mgr" : 1022, "sal" : 2700, "comm" : null, "deptno" : 30 }
+{ "_id" : { "$oid" : "5322a67c24a4be906477292b" }, "empid" : 1023, "ename" : "scott", "job" : "salesman", "mgr" : 1023, "sal" : 2500, "comm" : 350, "deptno" : 30 }
+{ "_id" : { "$oid" : "5322a6a124a4be906477292c" }, "empid" : 1024, "ename" : "martin", "job" : "salesman", "mgr" : 1023, "sal" : 2900, "comm" : 735, "deptno" : 30 }
+{ "_id" : { "$oid" : "5322a6c424a4be906477292d" }, "empid" : 1025, "ename" : "crow", "job" : "salesman", "mgr" : 1023, "sal" : 3200, "comm" : null, "deptno" : 20 }
+{ "_id" : { "$oid" : "5322a6ef24a4be906477292e" }, "empid" : 1026, "ename" : "blake", "job" : "clerk", "mgr" : 1024, "sal" : 1200, "comm" : null, "deptno" : 30 }
+{ "_id" : { "$oid" : "5322c03824a4be906477292f" }, "empid" : 1027, "ename" : "richards", "job" : "clerk", "mgr" : 1024, "sal" : 1500, "comm" : null, "deptno" : 10 }
+{ "_id" : { "$oid" : "5322c1e024a4be9064772930" }, "empid" : 1028, "ename" : "peter", "job" : "analyst", "mgr" : 1025, "sal" : 3500, "comm" : null, "deptno" : 30 }
+{ "_id" : { "$oid" : "5322c21924a4be9064772931" }, "empid" : 1029, "ename" : "bob", "job" : "manager", "mgr" : 1020, "sal" : 4900, "comm" : null, "deptno" : 30 }
+{ "_id" : { "$oid" : "5322c2b224a4be9064772932" }, "empid" : 1030, "ename" : "saleel", "job" : "programmer", "mgr" : 1020, "sal" : 2900, "comm" : null, "deptno" : 10 }
+{ "_id" : { "$oid" : "5322c2df24a4be9064772933" }, "empid" : 1031, "ename" : "sharmin", "job" : "programmer", "mgr" : 1020, "sal" : 4999, "comm" : null, "deptno" : 40 }
+{ "_id" : { "$oid" : "5322c31124a4be9064772934" }, "empid" : 1032, "ename" : "vrushali", "job" : "analyst", "mgr" : 1030, "sal" : 4999, "comm" : null, "deptno" : 20 }
+{ "_id" : { "$oid" : "5322c38124a4be9064772935" }, "empid" : 1033, "ename" : "vasant", "job" : "salesman", "mgr" : 1029, "sal" : 2200, "comm" : 0, "deptno" : 40 }
+{ "_id" : { "$oid" : "5322c87424a4be9064772936" }, "empid" : 1034, "ename" : "vasu", "job" : "salesman", "mgr" : 1029, "sal" : 2200, "comm" : 250, "deptno" : 40 }
+{ "_id" : { "$oid" : "5322ca1924a4be9064772937" }, "empid" : 1035, "ename" : "rahul", "job" : "clerk", "mgr" : 1029, "sal" : 1200, "comm" : null, "deptno" : 40 }
+{ "_id" : { "$oid" : "5322cb0024a4be9064772938" }, "empid" : 1036, "ename" : "raju", "job" : "administrator", "mgr" : 1031, "sal" : 3400, "comm" : null, "deptno" : 50 }
+{ "_id" : { "$oid" : "5322cb2024a4be9064772939" }, "empid" : 1037, "ename" : "ramu", "job" : "clerk", "mgr" : 1031, "sal" : 1400, "comm" : null, "deptno" : 50 }
+{ "_id" : { "$oid" : "5322cb4a24a4be906477293a" }, "empid" : 1038, "ename" : "neel", "job" : "administrator", "mgr" : 1030, "sal" : 4200, "comm" : null, "deptno" : 10 }
+{ "_id" : { "$oid" : "5322dcf124a4be906477293b" }, "empid" : 1039, "ename" : "saleel", "job" : "analyst", "mgr" : 1022, "sal" : 3700, "comm" : null, "deptno" : 50 }
+{ "_id" : { "$oid" : "5322dd3d24a4be906477293c" }, "empid" : 1040, "ename" : "amit", "job" : "administrator", "mgr" : 1029, "sal" : 3500, "comm" : null, "deptno" : 50, "phone" : [ 85088422, { "$numberLong" : "9822884228" } ] }
+{ "_id" : { "$oid" : "5322de0d24a4be906477293d" }, "empid" : 1041, "ename" : "dinesh", "job" : "programmer", "mgr" : 1021, "sal" : 3500, "comm" : null, "deptno" : 50, "phone" : [ 85088422, { "$numberLong" : "9822884228" } ], "skills" : { "languages" : [ "C++", "JAVA" ], "web" : [ "php", "java", "jquery" ] } }
+{ "_id" : { "$oid" : "5322ded924a4be906477293e" }, "empid" : 1040, "ename" : "amit", "job" : "administrator", "mgr" : 1029, "sal" : 3500, "comm" : null, "deptno" : 50, "phone" : [ "9850884228", "9822884228" ] }
+{ "_id" : { "$oid" : "5322df3324a4be906477293f" }, "empid" : 1041, "ename" : "dinesh", "job" : "programmer", "mgr" : 1021, "sal" : 3500, "comm" : null, "deptno" : 50, "phone" : [ "020-25420200", { "$numberLong" : "9822336644" } ], "skills" : { "languages" : [ "C++", "JAVA" ], "web" : [ "php", "java", "jquery" ] } }
+{ "_id" : { "$oid" : "5322df9724a4be9064772940" }, "empid" : 1042, "ename" : "rudra", "job" : "programmer", "mgr" : 1021, "sal" : 2400, "comm" : null, "deptno" : 50, "phone" : "020-25420212", "skills" : { "web" : [ "php", "java", "jquery" ], "database" : [ "oracle", "ms-sql server", "mongodb" ] } }
+{ "_id" : { "$oid" : "5322e01424a4be9064772941" }, "empid" : 1043, "ename" : "pankaj", "job" : "programmer", "mgr" : 1023, "sal" : 3600, "comm" : null, "deptno" : 40, "phone" : "022-2548345", "skills" : { "language" : ".NET", "database" : "ms-sql server" } }
+{ "_id" : { "$oid" : "5322e52024a4be9064772942" }, "empid" : 1044, "ename" : "anoop", "job" : "programmer", "mgr" : 1029, "sal" : 2300, "comm" : 1200, "deptno" : 50, "phone" : "022-2548345", "skills" : { "language" : [ ".NET", "java" ], "database" : "oracle", "web" : [ "json", "jquery", "javascript" ] } }
+{ "_id" : { "$oid" : "5323d3739da22794f77a46dd" }, "empid" : 1045, "ename" : "nitish", "job" : "programmer", "mgr" : 1039, "sal" : 1300, "comm" : 1200, "deptno" : 50, "phone" : "022-2548345", "skills" : { "language" : [ ".NET", "java" ], "database" : { "rdbms" : [ "oracle", "db2" ], "nosql" : [ "mongodb", "hive" ] }, "web" : [ "json", "jquery", "javascript", "php" ] } }
+{ "_id" : { "$oid" : "5323d4029da22794f77a46de" }, "empid" : 1046, "ename" : "neel", "job" : "programmer", "mgr" : 1039, "sal" : 1800, "comm" : 1400, "deptno" : 50, "phone" : "022-2534565", "skills" : { "language" : "ruby", "database" : { "rdbms" : [ "oracle", "db2" ], "nosql" : [ "mongodb", "hive", "hbase" ] } } }
+{ "_id" : { "$oid" : "5344b5ccb76ff1ee2e6993c8" }, "empid" : 1047, "ename" : "arjun", "job" : "auditor", "mgr" : 1020, "sal" : 3200, "comm" : null, "hra" : 1500, "da" : 1200, "deptno" : 20 }
+{ "_id" : { "$oid" : "5344b623b76ff1ee2e6993c9" }, "empid" : 1048, "ename" : "amol", "job" : "auditor", "mgr" : 1047, "sal" : 3800, "comm" : null, "hra" : 1000, "da" : 900, "deptno" : 20 }
+{ "_id" : { "$oid" : "5344b677b76ff1ee2e6993ca" }, "empid" : 1049, "ename" : "sangita", "job" : "auditor", "mgr" : 1040, "sal" : 3100, "comm" : null, "hra" : 1000, "da" : 1500, "deptno" : 20 }
+{ "_id" : { "$oid" : "5344b743b76ff1ee2e6993cb" }, "empid" : 1050, "ename" : "gita", "job" : "writer", "language" : [ "english", "hindi" ], "mgr" : 1049, "sal" : 2150, "comm" : 750, "hra" : 1300, "da" : 1700, "deptno" : 40 }
+{ "_id" : { "$oid" : "5344b779b76ff1ee2e6993cc" }, "empid" : 1051, "ename" : "sita", "job" : "writer", "language" : [ "english", "hindi", "marathi" ], "mgr" : 1049, "sal" : 3755, "comm" : 750, "hra" : 1100, "da" : 1100, "deptno" : 40 }

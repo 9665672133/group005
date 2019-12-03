@@ -1,0 +1,8 @@
+package com.admin;
+
+public class Book 
+{
+	String Book_Id,Book_Name,Author;
+	int price;
+
+}
